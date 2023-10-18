@@ -1,8 +1,10 @@
 <template>
+  
   <NavBar />
     <div class="container">
       <RouterView />
     </div>
+
 </template>
 
 <script setup>
@@ -14,4 +16,5 @@ import NavBar from './components/Layout/NavBar.vue';
 
 
 <style lang="scss" scoped>
+
 </style>
