@@ -7,7 +7,7 @@
 </template>
 
 <style lang="scss" scoped>
-@import '../../assets/main.scss';
+@import '../../../assets/main.scss';
 .btn-with-icon {
   font-family: 'Inter', sans-serif;
   font-size: 16px;

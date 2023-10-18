@@ -14,7 +14,7 @@
 </template>
 
 <style lang="scss" scoped>
-@import '../../assets/main.scss';
+@import '../../../assets/main.scss';
 .menu-btn {
   position: absolute;
   top: 0;

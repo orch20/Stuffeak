@@ -15,9 +15,9 @@
 <script setup>
   import LogoStuffeak from '../LogoStuffeak.vue'
 import NavMenu from '../NavMenu.vue'
-import LoginButton from '../Buttons/LoginButton.vue'
-import PartnerButton from '../Buttons/PartnerButton.vue'
-import MenuButton from '../Buttons/MenuButton.vue'
+import LoginButton from '../Elements/Buttons/LoginButton.vue'
+import PartnerButton from '../Elements/Buttons/PartnerButton.vue'
+import MenuButton from '../Elements/Buttons/MenuButton.vue'
 </script>
 
 <style lang="scss">

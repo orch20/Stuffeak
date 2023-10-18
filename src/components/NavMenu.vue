@@ -2,7 +2,7 @@
     <nav class="menu">
         <ul class="menu__list">
         <li class="menu__item"><a href="#" class="menu__link">About</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">How it work</a></li>
+        <li class="menu__item"><a href="#" class="menu__link">How it works</a></li>
         <li class="menu__item"><a href="#" class="menu__link">Pricing</a></li>
         <li class="menu__item"><a href="#" class="menu__link">Our sponsors</a></li>
         <li class="menu__item"><a href="#" class="menu__link">Contact</a></li>
@@ -11,7 +11,7 @@
 </template>
 
 <style lang="scss">
-@import '../assets//main.scss';
+@import '../assets/main.scss';
 
 .menu {
   margin-top: auto;
