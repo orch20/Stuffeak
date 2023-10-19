@@ -4,7 +4,7 @@
             <div class="container">
                 <h1 class="top__title">Over 
                     <span class="top__title-highlight">100,000</span> 
-                    <span class="top__title-italic">different business</span>
+                    <span class="top__title-italic"> different business</span>
                     <br>in USA are looking for temp staff everyday
                 </h1>
                 <div class="top__subtitle">Unlike traditional staffing agencies, we connect you directly with professional staff</div>

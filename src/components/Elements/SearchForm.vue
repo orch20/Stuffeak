@@ -2,16 +2,19 @@
     <form class="search-main">
         <div class="search-main__select">
             <select>
+                <option value="" disabled selected hidden>State</option>
                 <option v-for="state in states" :key="state" value="{{state}}">{{ state }}</option>
              </select>
             </div>
             <div class="search-main__select">
             <select>
+                <option value="" disabled selected hidden>Industry</option>
                 <option v-for="industry in industries" :key="industry" value="{{industry}}">{{ industry }}</option>
             </select>
             </div>
             <div class="search-main__select">
             <select>
+                <option value="" disabled selected hidden>Specialty</option>
                 <option v-for="specialty in specialties" :key="specialty" value="{{speciality}}">{{ specialty }}</option>
             </select>
         </div>
@@ -23,9 +26,9 @@
 import SearchMainButton from './Buttons/SearchMainButton.vue';
 
 // -----------------------------------------   TEMPORARY DATA   -----------------------------------------
-const states = ["State","Alabama","Nebraska","Virginia","New Hampshire", "Massachusetts","Rhode Island", "Connecticut", "Vermont", "Maine", "New York", "New Jersey", "Pennsylvania", "Delaware", "Maryland", "North Carolina", "South Carolina", "Utah"];
-const industries = ["Industry", "Industry-01", "Industry-02", "Industry-03"];
-const specialties = ["Specialty", "Specialty-01", "Specialty-02", "Specialty-03"];
+const states = ["Alabama","Nebraska","Virginia","New Hampshire", "Massachusetts","Rhode Island", "Connecticut", "Vermont", "Maine", "New York", "New Jersey", "Pennsylvania", "Delaware", "Maryland", "North Carolina", "South Carolina", "Utah"];
+const industries = ["Industry-01", "Industry-02", "Industry-03"];
+const specialties = ["Specialty-01", "Specialty-02", "Specialty-03"];
 // ------------------------------------------------------------------------------------------------------
 
 </script>
@@ -129,5 +132,6 @@ const specialties = ["Specialty", "Specialty-01", "Specialty-02", "Specialty-03"
   select::-ms-expand {
     display: none;
   }
+
 }
 </style>
