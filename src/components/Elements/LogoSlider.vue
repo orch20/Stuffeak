@@ -1,28 +1,57 @@
 <template>
      <div class="logos-slider-wrap">
-        <!-- <div class="logos-slider__title">They are trusted Staffeak:</div> 
-            BEGIN logos-slider
-        <div class="logos-slider swiper-initialized swiper-horizontal swiper-pointer-events swiper-free-mode" id="logos-slider">
-        <div class="swiper-wrapper" id="swiper-wrapper-da2e98fce72b4475" aria-live="off" style="transform: translate3d(-2816px, 0px, 0px); transition-duration: 4000ms;"><div class="swiper-slide logos-slider__slide swiper-slide-duplicate" data-swiper-slide-index="0" role="group" aria-label="1 / 18" style="margin-right: 20px;"><img src="assets/img/logos/logo-01.svg" alt="logo"></div><div class="swiper-slide logos-slider__slide swiper-slide-duplicate" data-swiper-slide-index="1" role="group" aria-label="2 / 18" style="margin-right: 20px;"><img src="assets/img/logos/logo-02.svg" alt="logo"></div><div class="swiper-slide logos-slider__slide swiper-slide-duplicate" data-swiper-slide-index="2" role="group" aria-label="3 / 18" style="margin-right: 20px;"><img src="assets/img/logos/logo-03.svg" alt="logo"></div><div class="swiper-slide logos-slider__slide swiper-slide-duplicate" data-swiper-slide-index="3" role="group" aria-label="4 / 18" style="margin-right: 20px;"><img src="assets/img/logos/logo-04.svg" alt="logo"></div><div class="swiper-slide logos-slider__slide swiper-slide-duplicate" data-swiper-slide-index="4" role="group" aria-label="5 / 18" style="margin-right: 20px;"><img src="assets/img/logos/logo-05.svg" alt="logo"></div><div class="swiper-slide logos-slider__slide swiper-slide-duplicate" data-swiper-slide-index="5" role="group" aria-label="6 / 18" style="margin-right: 20px;"><img src="assets/img/logos/logo-06.svg" alt="logo"></div><div class="swiper-slide logos-slider__slide swiper-slide-duplicate" data-swiper-slide-index="6" role="group" aria-label="7 / 18" style="margin-right: 20px;"><img src="assets/img/logos/logo-07.svg" alt="logo"></div><div class="swiper-slide logos-slider__slide swiper-slide-duplicate" data-swiper-slide-index="7" role="group" aria-label="8 / 18" style="margin-right: 20px;"><img src="assets/img/logos/logo-08.svg" alt="logo"></div><div class="swiper-slide logos-slider__slide swiper-slide-duplicate" data-swiper-slide-index="8" role="group" aria-label="9 / 18" style="margin-right: 20px;"><img src="assets/img/logos/logo-09.svg" alt="logo"></div><div class="swiper-slide logos-slider__slide swiper-slide-duplicate swiper-slide-duplicate-prev" data-swiper-slide-index="9" role="group" aria-label="10 / 18" style="margin-right: 20px;"><img src="assets/img/logos/logo-01.svg" alt="logo"></div><div class="swiper-slide logos-slider__slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="10" role="group" aria-label="11 / 18" style="margin-right: 20px;"><img src="assets/img/logos/logo-02.svg" alt="logo"></div><div class="swiper-slide logos-slider__slide swiper-slide-duplicate swiper-slide-duplicate-next" data-swiper-slide-index="11" role="group" aria-label="12 / 18" style="margin-right: 20px;"><img src="assets/img/logos/logo-03.svg" alt="logo"></div><div class="swiper-slide logos-slider__slide swiper-slide-duplicate" data-swiper-slide-index="12" role="group" aria-label="13 / 18" style="margin-right: 20px;"><img src="assets/img/logos/logo-04.svg" alt="logo"></div><div class="swiper-slide logos-slider__slide swiper-slide-duplicate" data-swiper-slide-index="13" role="group" aria-label="14 / 18" style="margin-right: 20px;"><img src="assets/img/logos/logo-05.svg" alt="logo"></div><div class="swiper-slide logos-slider__slide swiper-slide-duplicate" data-swiper-slide-index="14" role="group" aria-label="15 / 18" style="margin-right: 20px;"><img src="assets/img/logos/logo-06.svg" alt="logo"></div><div class="swiper-slide logos-slider__slide swiper-slide-duplicate" data-swiper-slide-index="15" role="group" aria-label="16 / 18" style="margin-right: 20px;"><img src="assets/img/logos/logo-07.svg" alt="logo"></div><div class="swiper-slide logos-slider__slide swiper-slide-duplicate" data-swiper-slide-index="16" role="group" aria-label="17 / 18" style="margin-right: 20px;"><img src="assets/img/logos/logo-08.svg" alt="logo"></div><div class="swiper-slide logos-slider__slide swiper-slide-duplicate" data-swiper-slide-index="17" role="group" aria-label="18 / 18" style="margin-right: 20px;"><img src="assets/img/logos/logo-09.svg" alt="logo"></div>
-            <div class="swiper-slide logos-slider__slide" data-swiper-slide-index="0" role="group" aria-label="1 / 18" style="margin-right: 20px;"><img src="assets/img/logos/logo-01.svg" alt="logo"></div>
-            <div class="swiper-slide logos-slider__slide" data-swiper-slide-index="1" role="group" aria-label="2 / 18" style="margin-right: 20px;"><img src="assets/img/logos/logo-02.svg" alt="logo"></div>
-            <div class="swiper-slide logos-slider__slide" data-swiper-slide-index="2" role="group" aria-label="3 / 18" style="margin-right: 20px;"><img src="assets/img/logos/logo-03.svg" alt="logo"></div>
-            <div class="swiper-slide logos-slider__slide" data-swiper-slide-index="3" role="group" aria-label="4 / 18" style="margin-right: 20px;"><img src="assets/img/logos/logo-04.svg" alt="logo"></div>
-            <div class="swiper-slide logos-slider__slide" data-swiper-slide-index="4" role="group" aria-label="5 / 18" style="margin-right: 20px;"><img src="assets/img/logos/logo-05.svg" alt="logo"></div>
-            <div class="swiper-slide logos-slider__slide" data-swiper-slide-index="5" role="group" aria-label="6 / 18" style="margin-right: 20px;"><img src="assets/img/logos/logo-06.svg" alt="logo"></div>
-            <div class="swiper-slide logos-slider__slide" data-swiper-slide-index="6" role="group" aria-label="7 / 18" style="margin-right: 20px;"><img src="assets/img/logos/logo-07.svg" alt="logo"></div>
-            <div class="swiper-slide logos-slider__slide" data-swiper-slide-index="7" role="group" aria-label="8 / 18" style="margin-right: 20px;"><img src="assets/img/logos/logo-08.svg" alt="logo"></div>
-            <div class="swiper-slide logos-slider__slide" data-swiper-slide-index="8" role="group" aria-label="9 / 18" style="margin-right: 20px;"><img src="assets/img/logos/logo-09.svg" alt="logo"></div>
-            <div class="swiper-slide logos-slider__slide swiper-slide-prev" data-swiper-slide-index="9" role="group" aria-label="10 / 18" style="margin-right: 20px;"><img src="assets/img/logos/logo-01.svg" alt="logo"></div>
-            <div class="swiper-slide logos-slider__slide swiper-slide-active" data-swiper-slide-index="10" role="group" aria-label="11 / 18" style="margin-right: 20px;"><img src="assets/img/logos/logo-02.svg" alt="logo"></div>
-            <div class="swiper-slide logos-slider__slide swiper-slide-next" data-swiper-slide-index="11" role="group" aria-label="12 / 18" style="margin-right: 20px;"><img src="assets/img/logos/logo-03.svg" alt="logo"></div>
-            <div class="swiper-slide logos-slider__slide" data-swiper-slide-index="12" role="group" aria-label="13 / 18" style="margin-right: 20px;"><img src="assets/img/logos/logo-04.svg" alt="logo"></div>
-            <div class="swiper-slide logos-slider__slide" data-swiper-slide-index="13" role="group" aria-label="14 / 18" style="margin-right: 20px;"><img src="assets/img/logos/logo-05.svg" alt="logo"></div>
-            <div class="swiper-slide logos-slider__slide" data-swiper-slide-index="14" role="group" aria-label="15 / 18" style="margin-right: 20px;"><img src="assets/img/logos/logo-06.svg" alt="logo"></div>
-            <div class="swiper-slide logos-slider__slide" data-swiper-slide-index="15" role="group" aria-label="16 / 18" style="margin-right: 20px;"><img src="assets/img/logos/logo-07.svg" alt="logo"></div>
-            <div class="swiper-slide logos-slider__slide" data-swiper-slide-index="16" role="group" aria-label="17 / 18" style="margin-right: 20px;"><img src="assets/img/logos/logo-08.svg" alt="logo"></div>
-            <div class="swiper-slide logos-slider__slide" data-swiper-slide-index="17" role="group" aria-label="18 / 18" style="margin-right: 20px;"><img src="assets/img/logos/logo-09.svg" alt="logo"></div>
-        <div class="swiper-slide logos-slider__slide swiper-slide-duplicate" data-swiper-slide-index="0" role="group" aria-label="1 / 18" style="margin-right: 20px;"><img src="assets/img/logos/logo-01.svg" alt="logo"></div><div class="swiper-slide logos-slider__slide swiper-slide-duplicate" data-swiper-slide-index="1" role="group" aria-label="2 / 18" style="margin-right: 20px;"><img src="assets/img/logos/logo-02.svg" alt="logo"></div><div class="swiper-slide logos-slider__slide swiper-slide-duplicate" data-swiper-slide-index="2" role="group" aria-label="3 / 18" style="margin-right: 20px;"><img src="assets/img/logos/logo-03.svg" alt="logo"></div><div class="swiper-slide logos-slider__slide swiper-slide-duplicate" data-swiper-slide-index="3" role="group" aria-label="4 / 18" style="margin-right: 20px;"><img src="assets/img/logos/logo-04.svg" alt="logo"></div><div class="swiper-slide logos-slider__slide swiper-slide-duplicate" data-swiper-slide-index="4" role="group" aria-label="5 / 18" style="margin-right: 20px;"><img src="assets/img/logos/logo-05.svg" alt="logo"></div><div class="swiper-slide logos-slider__slide swiper-slide-duplicate" data-swiper-slide-index="5" role="group" aria-label="6 / 18" style="margin-right: 20px;"><img src="assets/img/logos/logo-06.svg" alt="logo"></div><div class="swiper-slide logos-slider__slide swiper-slide-duplicate" data-swiper-slide-index="6" role="group" aria-label="7 / 18" style="margin-right: 20px;"><img src="assets/img/logos/logo-07.svg" alt="logo"></div><div class="swiper-slide logos-slider__slide swiper-slide-duplicate" data-swiper-slide-index="7" role="group" aria-label="8 / 18" style="margin-right: 20px;"><img src="assets/img/logos/logo-08.svg" alt="logo"></div><div class="swiper-slide logos-slider__slide swiper-slide-duplicate" data-swiper-slide-index="8" role="group" aria-label="9 / 18" style="margin-right: 20px;"><img src="assets/img/logos/logo-09.svg" alt="logo"></div><div class="swiper-slide logos-slider__slide swiper-slide-duplicate swiper-slide-duplicate-prev" data-swiper-slide-index="9" role="group" aria-label="10 / 18" style="margin-right: 20px;"><img src="assets/img/logos/logo-01.svg" alt="logo"></div><div class="swiper-slide logos-slider__slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="10" role="group" aria-label="11 / 18" style="margin-right: 20px;"><img src="assets/img/logos/logo-02.svg" alt="logo"></div><div class="swiper-slide logos-slider__slide swiper-slide-duplicate swiper-slide-duplicate-next" data-swiper-slide-index="11" role="group" aria-label="12 / 18" style="margin-right: 20px;"><img src="assets/img/logos/logo-03.svg" alt="logo"></div><div class="swiper-slide logos-slider__slide swiper-slide-duplicate" data-swiper-slide-index="12" role="group" aria-label="13 / 18" style="margin-right: 20px;"><img src="assets/img/logos/logo-04.svg" alt="logo"></div><div class="swiper-slide logos-slider__slide swiper-slide-duplicate" data-swiper-slide-index="13" role="group" aria-label="14 / 18" style="margin-right: 20px;"><img src="assets/img/logos/logo-05.svg" alt="logo"></div><div class="swiper-slide logos-slider__slide swiper-slide-duplicate" data-swiper-slide-index="14" role="group" aria-label="15 / 18" style="margin-right: 20px;"><img src="assets/img/logos/logo-06.svg" alt="logo"></div><div class="swiper-slide logos-slider__slide swiper-slide-duplicate" data-swiper-slide-index="15" role="group" aria-label="16 / 18" style="margin-right: 20px;"><img src="assets/img/logos/logo-07.svg" alt="logo"></div><div class="swiper-slide logos-slider__slide swiper-slide-duplicate" data-swiper-slide-index="16" role="group" aria-label="17 / 18" style="margin-right: 20px;"><img src="assets/img/logos/logo-08.svg" alt="logo"></div><div class="swiper-slide logos-slider__slide swiper-slide-duplicate" data-swiper-slide-index="17" role="group" aria-label="18 / 18" style="margin-right: 20px;"><img src="assets/img/logos/logo-09.svg" alt="logo"></div></div>
-        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>  -->
+        <div class="logos-slider__title">They are trusted Staffeak:</div>
+        <!--BEGIN logos-slider-->
+        <div class="logos-wrap">
+            <div class="logo"><img src="../../img/logos/logo-01.svg" alt=""> </div>
+            <div class="logo"><img src="../../img/logos/logo-02.svg" alt=""> </div>
+            <div class="logo"><img src="../../img/logos/logo-03.svg" alt=""> </div>
+            <div class="logo"><img src="../../img/logos/logo-04.svg" alt=""> </div>
+            <div class="logo"><img src="../../img/logos/logo-05.svg" alt=""> </div>
+            <div class="logo"><img src="../../img/logos/logo-06.svg" alt=""> </div>
+            <div class="logo"><img src="../../img/logos/logo-07.svg" alt=""> </div>
+            <div class="logo"><img src="../../img/logos/logo-08.svg" alt=""> </div>
+            <div class="logo"><img src="../../img/logos/logo-09.svg" alt=""> </div>
+        </div>
+        <!--END   logos-slider-->
     </div>
+  
 </template>
+
+<style lang="scss" scoped>
+@import '../../assets/main.scss';
+
+.logos-slider-wrap {
+  position: absolute;
+  right: 0;
+  bottom: 110px;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  margin: auto;
+}
+
+.logos-slider__title {
+ 
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  text-align: center;
+  color: $light-grey;
+}
+
+.logos-wrap{
+margin: 0 auto;
+/* text-align: center; */
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.logo{
+    margin-right: 60px;
+}
+
+
+</style>
