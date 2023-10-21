@@ -6,7 +6,8 @@ import WhatMakesUsDifSlider from '../Elements/WhatMakesUsDifSlider.vue';
             <div class="container">
             <h2 class="second__title">What makes us <span class="italic">different</span> from the others?</h2>
             <WhatMakesUsDifSlider />
-        </div>
+            </div>
+            
     </div>
 </template>
 
