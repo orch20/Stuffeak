@@ -40,6 +40,7 @@ import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 
 const modules = [Pagination];
+
 const pagination = {
   clickable: true,
   el: ".swiper-pagination",
