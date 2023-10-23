@@ -2,34 +2,49 @@
 import OblongBodySlider from './SliderElementsRegisterSectiin/OblongBodySlider.vue';
 <template>
     <div class="registr-sec__sliders">
-    
-    <Swiper class="registr-sec__slider registr-sec__slider-01" :modules="modules" :grabCursor= false :slidesPerView="'auto'" :spaceBetween="20" :freeMode= true :reeModeMomentum= true :loop= true :speed= 6000 :mousewheelControl= false :autoplay="autoplay" :breakpoints="breakpoints" :navigation="true">
-        <swiper-slide class="swiper-slide registr-sec__slide"><OblongBodyPicSlider /></swiper-slide> 
-        <swiper-slide class="swiper-slide registr-sec__slide"><OblongBodyPicSlider /></swiper-slide> 
-        <swiper-slide class="swiper-slide registr-sec__slide"><GreenSearchIconCircleBodySlider /></swiper-slide>
-        <swiper-slide class="swiper-slide registr-sec__slide"><GreenCircleBodySlider /></swiper-slide>
-        <swiper-slide class="swiper-slide registr-sec__slide"><OblongBodyPicSlider /></swiper-slide>  
-        <swiper-slide class="swiper-slide registr-sec__slide"><GreenCircleBodySlider /></swiper-slide>
-        <swiper-slide class="swiper-slide registr-sec__slide"><OblongBodyPicSlider /></swiper-slide>  
-        <swiper-slide class="swiper-slide registr-sec__slide"><GreenSearchIconCircleBodySlider /></swiper-slide>
+      <Swiper class="registr-sec__slider registr-sec__slider-01" :modules="modules" :grabCursor= false :slidesPerView="'auto'" :spaceBetween="20" :freeMode= true :reeModeMomentum= true :loop= true :speed= 6000 :mousewheelControl= false :autoplay="autoplayLeft" :breakpoints="breakpoints" :navigation="true">
+        <swiper-slide class="swiper-slide registr-sec__slide"><Icon247andManSlider /></swiper-slide> 
+        <swiper-slide class="swiper-slide registr-sec__slide"><PicAndITSlider /></swiper-slide> 
+        <swiper-slide class="swiper-slide registr-sec__slide"><GreenCircleAndIconSearchCircle /></swiper-slide>
+        <swiper-slide class="swiper-slide registr-sec__slide"><PicAndNursingSliderDarker /></swiper-slide>
+        <swiper-slide class="swiper-slide registr-sec__slide"><Icon247andManSlider /></swiper-slide> 
+        <swiper-slide class="swiper-slide registr-sec__slide"><PicAndITSlider /></swiper-slide> 
+        <swiper-slide class="swiper-slide registr-sec__slide"><GreenCircleAndIconSearchCircle /></swiper-slide>
+        <swiper-slide class="swiper-slide registr-sec__slide"><PicAndNursingSliderDarker /></swiper-slide>
       </Swiper>
-    </div>
+      <Swiper class="registr-sec__slider registr-sec__slider-02" :modules="modules" :grabCursor= false :slidesPerView="'auto'" :spaceBetween="20" :freeMode= true :reeModeMomentum= true :loop= true :speed= 6000 :mousewheelControl= false :autoplay="autoplayRight" :breakpoints="breakpoints" :navigation="true">
+          <swiper-slide class="swiper-slide registr-sec__slide"><Icon247andManSlider /></swiper-slide> 
+          <swiper-slide class="swiper-slide registr-sec__slide"><PicAndITSlider /></swiper-slide> 
+          <swiper-slide class="swiper-slide registr-sec__slide"><GreenCircleAndIconSearchCircle /></swiper-slide>
+          <swiper-slide class="swiper-slide registr-sec__slide"><PicAndNursingSliderDarker /></swiper-slide>
+          <swiper-slide class="swiper-slide registr-sec__slide"><Icon247andManSlider /></swiper-slide> 
+          <swiper-slide class="swiper-slide registr-sec__slide"><PicAndITSlider /></swiper-slide> 
+          <swiper-slide class="swiper-slide registr-sec__slide"><GreenCircleAndIconSearchCircle /></swiper-slide>
+          <swiper-slide class="swiper-slide registr-sec__slide"><PicAndNursingSliderDarker /></swiper-slide>
+        </Swiper>
     
+    </div>
 </template>
 
 <script setup>
-import OblongBodyPicSlider from './SliderElementsRegisterSection/OblongBodyPicSlider.vue';
-import GreenSearchIconCircleBodySlider from './SliderElementsRegisterSection/GreenSearchIconCircleBodySlider.vue';
-import GreenCircleBodySlider from './SliderElementsRegisterSection/GreenCircleBodySlider.vue';
+import Icon247andManSlider from './SliderElementsRegisterSection/Icon247andManSlider.vue';
+import PicAndITSlider from './SliderElementsRegisterSection/PicAndITSlider.vue';
+import GreenCircleAndIconSearchCircle from './SliderElementsRegisterSection/GreenCircleAndIconSearchCircle.vue';
+import PicAndNursingSliderDarker from './SliderElementsRegisterSection/PicAndNursingSliderDarker.vue';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Autoplay, Pagination } from 'swiper/modules';
 
 const modules = [Autoplay, Pagination];
-const autoplay = {
+const autoplayLeft = {
   delay: 1,
   disableOnInteraction: true,
+}
+const autoplayRight = {
+  delay: 1,
+  disableOnInteraction: true,
+  reverseDirection: true,
 }
 const breakpoints = {
   769: {
@@ -91,6 +106,12 @@ const breakpoints = {
 .registr-sec__slider-01 {
   @include min(769) {
     left: 0;
+  }
+}
+
+.registr-sec__slider-02 {
+  @include min(769) {
+    right: 0;
   }
 }
 </style>
