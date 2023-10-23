@@ -1,28 +1,28 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html,
 body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 html {
-  font-family: $font;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.1;
-  color: $deep-green;
+    font-family: $font;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.1;
+    color: $deep-green;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    min-width: 320px;
 }
 
 h1,
@@ -32,84 +32,199 @@ h4,
 h5,
 h6,
 .h1-italic {
-  margin: 0 0 10px 0;
+    margin: 0 0 10px 0;
 }
 
 .italic {
-  font-family: $font-bold;
-  font-weight: 600;
-  font-style: italic;
-  line-height: 1.1;
+    font-family: $font-bold;
+    font-weight: 600;
+    font-style: italic;
+    line-height: 1.1;
 
-  @include responsive-font(50, 36);
+    @include responsive-font(50, 36);
 }
 
 h1,
 h2 {
-  line-height: 1.1;
+    line-height: 1.1;
 
-  @include responsive-font(44, 32);
+    @include responsive-font(44, 32);
 }
 
 h3 {
-  line-height: 1.2;
+    line-height: 1.2;
 
-  @include responsive-font(24, 22);
+    @include responsive-font(24, 22);
 }
 
 h4 {
-  line-height: 1.2;
+    line-height: 1.2;
 
-  @include responsive-font(20, 18);
+    @include responsive-font(20, 18);
 }
 
 h5,
 h6 {
-  @include responsive-font(18, 16);
+    @include responsive-font(18, 16);
 }
 
 p {
-  margin: 0 0 10px 0;
+    margin: 0 0 10px 0;
 }
 
 a {
-  transition: color $transition;
-  text-decoration: none;
-  color: $main-green;
+    transition: color $transition;
+    text-decoration: none;
+    color: $main-green;
 
-  &:hover {
-    color: $deep-green;
-  }
+    &:hover {
+        color: $deep-green;
+    }
 }
 
 ol,
 ul {
-  li {
-    padding: 0;
-  }
+    li {
+        padding: 0;
+    }
 }
 
 input,
 textarea,
 select,
 button {
-  border-radius: 0 !important;
-  outline: none;
+    border-radius: 0 !important;
+    outline: none;
 }
 
 button {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .input,
 .textarea,
 .select,
 .download__input {
-  position: relative;
+    position: relative;
 
-  input,
-  textarea,
-  select {
+    input,
+    textarea,
+    select {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 110%;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 54px;
+        padding: 2px 24px 2px 24px;
+        transition: 0.5s;
+        text-overflow: ellipsis;
+        color: $dark-green;
+        border: 1px solid $light-grey;
+        border-radius: 28px !important;
+        background: $neutral-white;
+
+        @include placeholder-color($neutral-grey);
+    }
+
+    span {
+        font-family: $font;
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 1.1;
+        position: absolute;
+        top: 10px;
+        left: 24px;
+        display: block;
+        transition: 0.5s;
+        pointer-events: none;
+        opacity: 0;
+        color: $neutral-grey;
+    }
+}
+
+.input.active input,
+.textarea.active textarea,
+.select.active select {
+    padding: 15px 24px 2px 24px;
+    color: $dark-green;
+
+    & + span {
+        opacity: 1;
+    }
+}
+
+.textarea {
+    textarea {
+        min-height: 100px;
+        padding-top: 18px;
+        padding-bottom: 18px;
+        resize: none;
+    }
+
+    &.active textarea {
+        padding-top: 23px;
+    }
+}
+
+.select {
+    position: relative;
+
+    &::before {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: 25px;
+        bottom: 0;
+        height: 8px;
+        margin: auto;
+        content: '';
+        pointer-events: none;
+        border-top: 8px solid $neutral-grey;
+        border-right: 4px solid transparent;
+        border-left: 4px solid transparent;
+    }
+
+    select {
+        position: relative;
+        padding-top: 4px;
+        padding-left: 23px;
+        cursor: pointer;
+        color: #63767e;
+
+        -webkit-appearance: none;
+        -moz-appearance: none;
+
+        &::-ms-expand {
+            display: none;
+        }
+    }
+}
+
+.input.error input,
+.textarea.error textarea,
+.select.error select,
+.download__input.error input {
+    padding: 15px 24px 2px 24px;
+    border-color: $error !important;
+
+    & + span {
+        opacity: 0;
+
+        & + span {
+            opacity: 1;
+            color: $error;
+        }
+    }
+}
+
+/* begin DOWNLOAD INPUT */
+.download {
+    position: relative;
+}
+
+.download__input {
     font-size: 16px;
     font-weight: 500;
     line-height: 110%;
@@ -117,6 +232,7 @@ button {
     overflow: hidden;
     width: 100%;
     height: 54px;
+    margin-bottom: 10px;
     padding: 2px 24px 2px 24px;
     transition: 0.5s;
     text-overflow: ellipsis;
@@ -126,548 +242,432 @@ button {
     background: $neutral-white;
 
     @include placeholder-color($neutral-grey);
-  }
 
-  span {
-    font-family: $font;
-    font-size: 10px;
-    font-weight: 500;
-    line-height: 1.1;
-    position: absolute;
-    top: 10px;
-    left: 24px;
-    display: block;
-    transition: 0.5s;
-    pointer-events: none;
-    opacity: 0;
-    color: $neutral-grey;
-  }
-}
-
-.input.active input,
-.textarea.active textarea,
-.select.active select {
-  padding: 15px 24px 2px 24px;
-  color: $dark-green;
-
-  & + span {
-    opacity: 1;
-  }
-}
-
-.textarea {
-  textarea {
-    min-height: 100px;
-    padding-top: 18px;
-    padding-bottom: 18px;
-    resize: none;
-  }
-
-  &.active textarea {
-    padding-top: 23px;
-  }
-}
-
-.select {
-  position: relative;
-
-  &::before {
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    right: 25px;
-    bottom: 0;
-    height: 8px;
-    margin: auto;
-    content: '';
-    pointer-events: none;
-    border-top: 8px solid $neutral-grey;
-    border-right: 4px solid transparent;
-    border-left: 4px solid transparent;
-  }
-
-  select {
-    position: relative;
-    padding-top: 4px;
-    padding-left: 23px;
-    cursor: pointer;
-    color: #63767e;
-
-    -webkit-appearance: none;
-    -moz-appearance: none;
-
-    &::-ms-expand {
-      display: none;
+    &.error {
+        .download__input-placeholder {
+            transform: translateY(8px);
+        }
     }
-  }
-}
 
-.input.error input,
-.textarea.error textarea,
-.select.error select,
-.download__input.error input {
-  padding: 15px 24px 2px 24px;
-  border-color: $error !important;
-
-  & + span {
-    opacity: 0;
-
-    & + span {
-      opacity: 1;
-      color: $error;
+    input {
+        z-index: 1;
+        opacity: 0;
     }
-  }
-}
-
-/* begin DOWNLOAD INPUT */
-.download {
-  position: relative;
-}
-
-.download__input {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 110%;
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: 54px;
-  margin-bottom: 10px;
-  padding: 2px 24px 2px 24px;
-  transition: 0.5s;
-  text-overflow: ellipsis;
-  color: $dark-green;
-  border: 1px solid $light-grey;
-  border-radius: 28px !important;
-  background: $neutral-white;
-
-  @include placeholder-color($neutral-grey);
-
-  &.error {
-    .download__input-placeholder {
-      transform: translateY(8px);
-    }
-  }
-
-  input {
-    z-index: 1;
-    opacity: 0;
-  }
 }
 
 .download__input-placeholder,
 .download__input-filename {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.1;
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  overflow: hidden;
-  margin: auto;
-  padding: 18px 45px 18px 24px;
-  transition: 0.5s;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  pointer-events: none;
-  color: $neutral-grey;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.1;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    margin: auto;
+    padding: 18px 45px 18px 24px;
+    transition: 0.5s;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    pointer-events: none;
+    color: $neutral-grey;
 }
 
 .download__input-filename {
-  display: none;
+    display: none;
 }
 
 .download__footer {
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 1.1;
-  padding-left: 15px;
-  color: $neutral-grey;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.1;
+    padding-left: 15px;
+    color: $neutral-grey;
 }
 
 .download-more {
-  margin-top: 30px;
-  margin-left: auto;
-  padding: 0;
-  text-decoration: underline;
-  color: $main-green;
-  border: none;
-  background-color: transparent;
-  box-shadow: none;
+    margin-top: 30px;
+    margin-left: auto;
+    padding: 0;
+    text-decoration: underline;
+    color: $main-green;
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
 }
 
 .download__icon-start {
-  position: absolute;
-  top: 0;
-  right: 20px;
-  bottom: 0;
-  width: 16px;
-  height: 16px;
-  margin: auto;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    bottom: 0;
+    width: 16px;
+    height: 16px;
+    margin: auto;
 
-  img {
-    display: block;
-    width: 100%;
-  }
+    img {
+        display: block;
+        width: 100%;
+    }
 }
 
 .download__icon-success {
-  position: absolute;
-  top: 0;
-  right: 10px;
-  bottom: 0;
-  display: none;
-  width: 32px;
-  height: 32px;
-  margin: auto;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    bottom: 0;
+    display: none;
+    width: 32px;
+    height: 32px;
+    margin: auto;
 
-  img {
-    display: block;
-    width: 100%;
-  }
+    img {
+        display: block;
+        width: 100%;
+    }
 }
 
 .download__clear-btn {
-  position: absolute;
-  top: -8px;
-  right: -8px;
-  display: none;
-  width: 32px;
-  height: 32px;
-  cursor: pointer;
-  border-radius: 50%;
-  background-color: $dark-green;
-  background-image: url('../img/i-delete-file.svg');
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    display: none;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: $dark-green;
+    background-image: url('../img/i-delete-file.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
 }
 
 /* end   DOWNLOAD INPUT */
 
 /* begin CHECKBOX */
 .checkbox-label {
-  display: flex;
-  cursor: pointer;
+    display: flex;
+    cursor: pointer;
 }
 
 .checkbox {
-  position: relative;
-  flex: none;
-  width: 24px;
-  height: 24px;
-  margin-right: 12px;
-
-  &.error span {
-    border-color: $error;
-  }
-
-  input {
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    display: block;
+    position: relative;
+    flex: none;
     width: 24px;
     height: 24px;
-    opacity: 0;
-  }
+    margin-right: 12px;
 
-  span {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 24px;
-    height: 24px;
-    pointer-events: none;
-    border: 1px solid $light-grey;
-    border-radius: 4px;
-    background: $neutral-white;
-
-    &::before {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      width: 16px;
-      height: 12px;
-      margin: auto;
-      content: '';
-      transition: $transition;
-      opacity: 0;
-      background-image: url('../img/check.svg');
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
-      background-size: contain;
+    &.error span {
+        border-color: $error;
     }
-  }
+
+    input {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 24px;
+        height: 24px;
+        opacity: 0;
+    }
+
+    span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 24px;
+        height: 24px;
+        pointer-events: none;
+        border: 1px solid $light-grey;
+        border-radius: 4px;
+        background: $neutral-white;
+
+        &::before {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 16px;
+            height: 12px;
+            margin: auto;
+            content: '';
+            transition: $transition;
+            opacity: 0;
+            background-image: url('../img/check.svg');
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-size: contain;
+        }
+    }
 }
 
 .checkbox input:checked + span:before {
-  opacity: 1;
+    opacity: 1;
 }
 
 .checkbox__text {
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 2;
-  color: $neutral-grey;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 2;
+    color: $neutral-grey;
 
-  a {
-    text-decoration: underline;
-    color: $main-green;
-  }
+    a {
+        text-decoration: underline;
+        color: $main-green;
+    }
 }
 
 /* end   CHECKBOX */
 
 /* begin CHECK */
 .check {
-  position: relative;
-  overflow: hidden;
-  flex: none;
-  width: 76px;
-  height: 40px;
-
-  input {
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 70px;
-    height: 40px;
-    cursor: pointer;
-    opacity: 0;
-  }
-
-  span {
-    display: block;
+    position: relative;
+    overflow: hidden;
+    flex: none;
     width: 76px;
     height: 40px;
-    cursor: pointer;
-    transition: 0.5s;
-    border: 1px solid $light-grey;
-    border-radius: 20px;
-    background-color: $neutral-white;
 
-    &::before {
-      position: absolute;
-      top: 2px;
-      left: 3px;
-      width: 36px;
-      height: 36px;
-      content: '';
-      transition: 0.5s;
-      border-radius: 50%;
-      background-color: $neutral-grey;
+    input {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 70px;
+        height: 40px;
+        cursor: pointer;
+        opacity: 0;
     }
-  }
+
+    span {
+        display: block;
+        width: 76px;
+        height: 40px;
+        cursor: pointer;
+        transition: 0.5s;
+        border: 1px solid $light-grey;
+        border-radius: 20px;
+        background-color: $neutral-white;
+
+        &::before {
+            position: absolute;
+            top: 2px;
+            left: 3px;
+            width: 36px;
+            height: 36px;
+            content: '';
+            transition: 0.5s;
+            border-radius: 50%;
+            background-color: $neutral-grey;
+        }
+    }
 }
 
 .check input:checked + span {
-  border-color: transparent;
-  background-color: $main-green;
+    border-color: transparent;
+    background-color: $main-green;
 
-  &::before {
-    left: 38px;
-    background-color: #fff;
-  }
+    &::before {
+        left: 38px;
+        background-color: #fff;
+    }
 }
 
 /* end   CHECK */
 
 svg {
-  display: block;
-  overflow: visible;
+    display: block;
+    overflow: visible;
 }
 
 .blockquote {
-  padding-left: 52px;
-  background-image: url('../img/blockquote.png');
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: 20px 16px;
+    padding-left: 52px;
+    background-image: url('../../img/blockquote.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 20px 16px;
 
-  span {
-    font-family: $font;
-    font-size: 16px;
-    font-weight: 500;
-    font-style: normal;
-    line-height: 1.1;
-    color: $neutral-grey;
-  }
+    span {
+        font-family: $font;
+        font-size: 16px;
+        font-weight: 500;
+        font-style: normal;
+        line-height: 1.1;
+        color: $neutral-grey;
+    }
 }
 
-//змінюємо колір виділення тексту мишью
+//змінюємо колір виділення тексту мишю
 ::selection {
-  color: $dark-green;
-  background-color: $fresh-mint;
-  text-shadow: none;
+    color: $dark-green;
+    background-color: $fresh-mint;
+    text-shadow: none;
 }
 
 .main-wrap {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 
-  -webkit-overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch;
 
-  &.no-scroll {
-    overflow: hidden;
-  }
+    &.no-scroll {
+        overflow: hidden;
+    }
 }
 
 .main {
-  position: relative;
+    position: relative;
 
-  flex-grow: 1;
+    flex-grow: 1;
 }
 
 .container {
-  position: relative;
-  width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 15px;
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 15px;
 
-  @include min(769) {
-    padding: 0 40px;
-  }
-  @include min(1200) {
-    padding: 0 80px;
-  }
+    @include min(769) {
+        padding: 0 40px;
+    }
+    @include min(1200) {
+        padding: 0 80px;
+    }
 }
 
 .page-top {
-  position: relative;
-  padding-top: 100px;
-  padding-bottom: 30px;
-  background-color: $neutral-white;
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 30px;
+    background-color: $neutral-white;
 
-  &.bg-rounds {
-    &::before {
-      opacity: 0.06;
-      background-size: cover;
+    &.bg-rounds {
+        &::before {
+            opacity: 0.06;
+            background-size: cover;
+        }
     }
-  }
 }
 
 .page-top__title {
-  font-family: $font;
-  font-weight: 500;
-  font-style: normal;
-  line-height: 1.1;
-  margin-bottom: 0;
-  color: $dark-green;
+    font-family: $font;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.1;
+    margin-bottom: 0;
+    color: $dark-green;
 
-  @include responsive-font(44, 32);
+    @include responsive-font(44, 32);
 }
 
 .bg-rounds {
-  position: relative;
+    position: relative;
 
-  &::before {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    content: '';
-    transition: $transition;
-    pointer-events: none;
-    opacity: 1;
-    background-image: url('../img/bg-top.svg');
-    background-position: 50% 50%;
-    background-size: cover;
-  }
+    &::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        content: '';
+        transition: $transition;
+        pointer-events: none;
+        opacity: 1;
+        background-image: url('../img/bg-top.svg');
+        background-position: 50% 50%;
+        background-size: cover;
+    }
 }
 
 /* begin DOUBLE PAGE */
 .double-page {
-  display: flex;
+    display: flex;
 }
 
 .double-page__item {
-  width: 100%;
-  min-height: 100vh;
-  padding-top: 100px;
-  padding-bottom: 100px;
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 100px;
+    padding-bottom: 100px;
 
-  @include min(769) {
-    width: 50%;
-  }
+    @include min(769) {
+        width: 50%;
+    }
 }
 
 .double-page__item--left {
-  position: relative;
-  display: none;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: cover;
+    position: relative;
+    display: none;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
 
-  @include min(769) {
-    display: flex;
-  }
+    @include min(769) {
+        display: flex;
+    }
 
-  &::after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 200px;
-    content: '';
-    pointer-events: none;
-    background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.01) 0%, #fff 100%);
-  }
+    &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 200px;
+        content: '';
+        pointer-events: none;
+        background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.01) 0%, #fff 100%);
+    }
 }
 
 .double-page__item--right {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .double-page-container {
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 15px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
 
-  @include min(769) {
-    max-width: 480px;
-    margin: 0;
-    padding: 0 40px;
-  }
-  @include min(1200) {
-    max-width: 640px;
-    padding: 0 120px;
-  }
+    @include min(769) {
+        max-width: 480px;
+        margin: 0;
+        padding: 0 40px;
+    }
+    @include min(1200) {
+        max-width: 640px;
+        padding: 0 120px;
+    }
 
-  .cta-btn {
-    max-width: 100%;
-  }
+    .cta-btn {
+        max-width: 100%;
+    }
 }
 
 .double-page-blockquote {
-  max-width: 600px;
-  margin: auto auto 0 auto;
-  padding-right: 40px;
-  padding-left: 92px;
-  color: $neutral-white;
-  background-image: url('../img/blockquote.svg');
-  background-repeat: no-repeat;
-  background-position: 40px 0;
-  background-size: 20px 16px;
+    max-width: 600px;
+    margin: auto auto 0 auto;
+    padding-right: 40px;
+    padding-left: 92px;
+    color: $neutral-white;
+    background-image: url('../img/blockquote.svg');
+    background-repeat: no-repeat;
+    background-position: 40px 0;
+    background-size: 20px 16px;
 
-  @include responsive-font(24, 20);
+    @include responsive-font(24, 20);
 
-  span {
-    color: $fresh-mint;
-  }
+    span {
+        color: $fresh-mint;
+    }
 }
 
 /* end   DOUBLE PAGE */
