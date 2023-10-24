@@ -3,34 +3,37 @@ import OblongBodySlider from './SliderElementsRegisterSectiin/OblongBodySlider.v
 <template>
     <div class="registr-sec__sliders">
       <Swiper class="registr-sec__slider registr-sec__slider-01" :modules="modules" :grabCursor= false :slidesPerView="'auto'" :spaceBetween="20" :freeMode= true :reeModeMomentum= true :loop= true :speed= 6000 :mousewheelControl= false :autoplay="autoplayLeft" :breakpoints="breakpoints" :navigation="true">
-        <swiper-slide class="swiper-slide registr-sec__slide"><Icon247andManSlider /></swiper-slide> 
-        <swiper-slide class="swiper-slide registr-sec__slide"><PicAndITSlider /></swiper-slide> 
+        <swiper-slide class="swiper-slide registr-sec__slide"><Icon247andManSlide /></swiper-slide> 
+        <swiper-slide class="swiper-slide registr-sec__slide"><PicAndITSlide /></swiper-slide> 
         <swiper-slide class="swiper-slide registr-sec__slide"><GreenCircleAndIconSearchCircle /></swiper-slide>
-        <swiper-slide class="swiper-slide registr-sec__slide"><PicAndNursingSliderDarker /></swiper-slide>
-        <swiper-slide class="swiper-slide registr-sec__slide"><Icon247andManSlider /></swiper-slide> 
-        <swiper-slide class="swiper-slide registr-sec__slide"><PicAndITSlider /></swiper-slide> 
+        <swiper-slide class="swiper-slide registr-sec__slide"><PicAndNursingSlideDarker /></swiper-slide>
         <swiper-slide class="swiper-slide registr-sec__slide"><GreenCircleAndIconSearchCircle /></swiper-slide>
-        <swiper-slide class="swiper-slide registr-sec__slide"><PicAndNursingSliderDarker /></swiper-slide>
+        <swiper-slide class="swiper-slide registr-sec__slide"><PicAndMarketingSlide /></swiper-slide>
       </Swiper>
       <Swiper class="registr-sec__slider registr-sec__slider-02" :modules="modules" :grabCursor= false :slidesPerView="'auto'" :spaceBetween="20" :freeMode= true :reeModeMomentum= true :loop= true :speed= 6000 :mousewheelControl= false :autoplay="autoplayRight" :breakpoints="breakpoints" :navigation="true">
-          <swiper-slide class="swiper-slide registr-sec__slide"><Icon247andManSlider /></swiper-slide> 
-          <swiper-slide class="swiper-slide registr-sec__slide"><PicAndITSlider /></swiper-slide> 
-          <swiper-slide class="swiper-slide registr-sec__slide"><GreenCircleAndIconSearchCircle /></swiper-slide>
-          <swiper-slide class="swiper-slide registr-sec__slide"><PicAndNursingSliderDarker /></swiper-slide>
-          <swiper-slide class="swiper-slide registr-sec__slide"><Icon247andManSlider /></swiper-slide> 
-          <swiper-slide class="swiper-slide registr-sec__slide"><PicAndITSlider /></swiper-slide> 
-          <swiper-slide class="swiper-slide registr-sec__slide"><GreenCircleAndIconSearchCircle /></swiper-slide>
-          <swiper-slide class="swiper-slide registr-sec__slide"><PicAndNursingSliderDarker /></swiper-slide>
-        </Swiper>
-    
+        <swiper-slide class="swiper-slide registr-sec__slide"><Icon24Slide /></swiper-slide>  
+        <swiper-slide class="swiper-slide registr-sec__slide"><Icon247Slide /></swiper-slide>
+        <swiper-slide class="swiper-slide registr-sec__slide"><PicAndWaitressingSlide /></swiper-slide>
+        <swiper-slide class="swiper-slide registr-sec__slide"><GreenCircleAndIconSearchCircle /></swiper-slide>
+        <swiper-slide class="swiper-slide registr-sec__slide"><PicAndSalesSlade /></swiper-slide>
+        <swiper-slide class="swiper-slide registr-sec__slide"><WomenAndCircleSlide /></swiper-slide>
+        <swiper-slide class="swiper-slide registr-sec__slide"><PicAndDentalSlide /></swiper-slide>
+      </Swiper>
     </div>
 </template>
 
 <script setup>
-import Icon247andManSlider from './SliderElementsRegisterSection/Icon247andManSlider.vue';
-import PicAndITSlider from './SliderElementsRegisterSection/PicAndITSlider.vue';
+import Icon247andManSlide from './SliderElementsRegisterSection/Icon247andManSlide.vue';
+import PicAndITSlide from './SliderElementsRegisterSection/PicAndITSlide.vue';
 import GreenCircleAndIconSearchCircle from './SliderElementsRegisterSection/GreenCircleAndIconSearchCircle.vue';
-import PicAndNursingSliderDarker from './SliderElementsRegisterSection/PicAndNursingSliderDarker.vue';
+import PicAndNursingSlideDarker from './SliderElementsRegisterSection/PicAndNursingSlideDarker.vue';
+import PicAndMarketingSlide from './SliderElementsRegisterSection/PicAndMarketingSlide.vue';
+import Icon24Slide from './SliderElementsRegisterSection/Icon24Slide.vue';
+import Icon247Slide from './SliderElementsRegisterSection/Icon247Slide.vue';
+import PicAndWaitressingSlide from './SliderElementsRegisterSection/PicAndWaitressingSlide.vue';
+import PicAndSalesSlade from './SliderElementsRegisterSection/PicAndSalesSlide.vue';
+import WomenAndCircleSlide from './SliderElementsRegisterSection/WomenAndCircleSlide.vue';
+import PicAndDentalSlide from './SliderElementsRegisterSection/PicAndDentalSlide.vue';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
 import 'swiper/css/pagination';

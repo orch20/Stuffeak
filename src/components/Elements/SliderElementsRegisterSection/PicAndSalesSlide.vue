@@ -1,7 +1,7 @@
 <template>
-    <div class="registr-sec__slide-body">
-        <div class="registr-sec__circle" style="background-color: #0AD582;"><img src="../../../img/faces/face-08.jpg" alt="people"></div>
-        <div class="registr-sec__slide-text">Waitressing</div>
+    <div class="registr-sec__slide-body registr-sec__slide-body--02">
+      <div class="registr-sec__circle" style="background-color: #0AD582;"><img src="../../../img/faces/face-07.jpg" alt="people"></div>
+      <div class="registr-sec__slide-text">Sales</div>
     </div>
 </template>
 
