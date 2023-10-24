@@ -102,7 +102,7 @@
   justify-content: space-between;
   align-items: center;
   height: 50px;
-  /* margin-top: -50px; */
+  margin-top: 30px;
   margin-right: 15px;
   margin-left: auto;
   padding: 16px 24px;
@@ -118,6 +118,7 @@
   box-shadow: 0 12px 48px rgba(8, 28, 34, .16);
 
   @include min(1025) {
+    margin-top: 40px;
     margin-right: 40px;
     transform: translateY(-40px);
   }

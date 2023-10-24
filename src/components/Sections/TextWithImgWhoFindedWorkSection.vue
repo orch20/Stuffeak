@@ -1,19 +1,19 @@
 <template>
-    <div class="index-text">
+    <section class="index-text">
         <div class="container">
-            <div class="index-text__title">
+            <p class="index-text__title">
                 Do you need to help your practice run smoothly, eliminating unwanted downtime? Find
                 <a href="#" class="index-text__title-link active">Quality
                     staffing</a>
                 with Staffeak. Unlike traditional staffing, we regularly fill jobs for different types of business – from
                 office workers to medicine personal.
-            </div>
+            </p>
             <div class="index-text__footer">
                 <div class="index-text__footer-ava"><img src="../../img/ava-trio.png" alt="img"></div>
-                <div class="index-text__footer-text">12,265 people already finded a work</div>
+                <p class="index-text__footer-text">12,265 people already finded a work</p>
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 

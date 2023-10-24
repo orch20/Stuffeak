@@ -63,6 +63,7 @@ const breakpoints = {
 @import '../../assets/main.scss';
 
 .registr-sec__sliders {
+  pointer-events: none;
   position: relative;
   width: calc(100% + 40px);
   margin-left: -20px;

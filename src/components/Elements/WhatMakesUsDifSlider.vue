@@ -5,28 +5,28 @@
         <div class="second-slider__icon">
             <img src="../../img/second-slider-icon-01.svg" alt="icon" />
         </div>
-        <div class="second-slider__text">
+        <p class="second-slider__text">
             We provide qualified and professional personnel - from office workers to
             medicine personal. All types of staff what you need
-        </div>
+        </p>
       </swiper-slide>
       <swiper-slide>
         <div class="second-slider__icon">
           <img src="../../img/second-slider-icon-02.svg" alt="icon" />
         </div>
-        <div class="second-slider__text">
+        <p class="second-slider__text">
             Actively recruit thousand’s of talented professionals that are unable to see
             your job posts
-        </div>
+        </p>
       </swiper-slide>
       <swiper-slide>
         <div class="second-slider__icon">
           <img src="../../img/second-slider-icon-03.svg" alt="icon" />
           </div>
-          <div class="second-slider__text">
+          <p class="second-slider__text">
               We screen candidates and handle the time-consuming work, so that you can focus
               on hiring those who suit your needs best
-          </div>
+          </p>
       </swiper-slide>
       <div class="swiper-pagination"></div>
     </swiper>

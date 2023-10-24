@@ -1,10 +1,10 @@
 <template>
-    <div class="text-anim" :class='{ active: isTextActive }' id="text-anim">
+    <section class="text-anim" :class='{ active: isTextActive }' id="text-anim">
         <div class="container">
             <div class="text-anim__row text-anim__row--left">We unite quality professionals</div>
             <div class="text-anim__row text-anim__row--righ">with your successful bussiness</div>
         </div>
-    </div>
+    </section>
 </template>
 
 

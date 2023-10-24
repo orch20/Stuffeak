@@ -1,14 +1,14 @@
 
 import WhatMakesUsDifSlider from '../Elements/WhatMakesUsDifSlider.vue';
 <template>
-    <div class="second">
+    <section class="second">
         <div class="second__inn"></div>
             <div class="container">
             <h2 class="second__title">What makes us <span class="italic">different</span> from the others?</h2>
             <WhatMakesUsDifSlider />
             </div>
             
-    </div>
+    </section>
 </template>
 
 <script setup>

@@ -1,10 +1,10 @@
 <template>
-    <div class="registr-sec">
+    <section class="registr-sec">
         <div class="container">
             <RegisterSectionSliders />
             <RegisterSectionRigthSide />
         </div>
-    </div>
+    </section>
 </template>
 
 <script setup>
@@ -20,7 +20,6 @@ import RegisterSectionSliders from '../Elements/RegisterSectionSliders.vue'
   position: relative;
   overflow: hidden;
   background-color: rgba(162, 242, 192, .15);
-  padding-bottom: 20px;
 
   &::before {
     position: absolute;

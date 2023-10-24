@@ -1,6 +1,6 @@
 <template>
   <div class="logos-slider-wrap">
-    <div class="logos-slider__title">They are trusted Staffeak:</div>
+    <p class="logos-slider__title">They are trusted Staffeak:</p>
     <!--BEGIN logos-slider-->
     <div class="logos-wrap">
       <div class="logo"><img src="../../img/logos/logo-01.svg" alt=""> </div>
