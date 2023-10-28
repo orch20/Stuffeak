@@ -68,8 +68,10 @@ const breakpoints = {
 <style lang="scss">
 @import '../../assets/main.scss';
 
-
-
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none;
+}
 
 .job-opport-sec__button{
     cursor: pointer;
